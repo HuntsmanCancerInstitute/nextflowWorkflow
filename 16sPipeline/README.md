@@ -1,8 +1,9 @@
 # 16s processing and analysis pipeline
 1. The 16sPipeline is QIIME2 based 16S rRNA data processing and analysis pipelines.
-2. The 16S data processing pipelines are designed to process reads with V3V4 primer, and are branched into two pipelines - gut micicrobe pipeline and enviromental microbe pipeline. Both of which are implemented with nextflow and fastqscreen for quick data processing and QC, and they use DADA2 for denoising for increased sensitivity. 
+2. The 16S data processing pipelines are designed to process reads with V3V4 primer(Zymo Research cat# D6405-2-400), and are branched into two pipelines - gut micicrobe pipeline and enviromental microbe pipeline. Both of which are implemented with nextflow and fastqscreen for quick data processing and QC, and they use DADA2 for denoising for increased sensitivity. 
 3. The gut micicrobe pipeline uses greengene database, and the enviromental microbe pipeline uses SILVA database. The enviromental microbe pipeline has an additional filter step, using fastqscreen filter mode to filter out Mitochondria and Plastid reads before import to QIIME2 to increase specificity.
 
+- [pip4zacPrimer/](pip4zacPrimer/): Directory containing nextflow and bash scripts of a special version of gut micicrobe pipeline with in house V3V4 primer of June Round lab and using deblur for denoising.
     
 
 * run on chpc:
